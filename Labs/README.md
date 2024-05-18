@@ -1,1 +1,59 @@
 # Lab
+
+<details>
+<summary><strong>Basic Linux Commands</strong></summary>
+<br>
+
+1. `cd` - To navigate between the directories
+2. `ls`, `ltr` - List directory contents, in long format sorted by modification time similar to 'll'
+3. `ls --help` - Display help information for the `ls` command
+4. For more commands refer [Basic Linux Cmds](https://www.geeksforgeeks.org/basic-linux-commands/)
+
+</details>
+
+<details>
+<summary><strong>Labs</strong></summary>
+<br>
+
+1. Navigate to the OpenLANE directory:
+```
+cd Desktop/work/tools/openlane_working_dir/openlane
+```
+2. Start the Docker container and to use the open lane  OpenLANE shell:
+```
+docker
+./flow.tcl -interactive
+```
+![openlane startup](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/7145ed52-c1b8-46a8-9d5a-7731c14ff422)
+
+Import the nesscary package to run the flow by using the following command
+```
+package require openlane 0.9
+```
+<details>
+<summary><strong>Setting Up the Design Environment</strong></summary>
+<br>
+
+3. Prepare the design in the OpenLANE shell:
+```
+prep -design picorv32a
+```
+![design prep](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/525dce4b-8d97-4607-bd16-3c7621c8fd6a)
+
+- The design is present in the
+```
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
