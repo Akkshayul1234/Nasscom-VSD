@@ -68,9 +68,7 @@ prep -design picorv32a
 
 ## Floorplan (FP)
 
-- Before running the FP, we check the `config.tcl` file in the design directory `~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a` and compare the values `vmetal` and `hmetal` of this to the `floorplan.tcl` in the configuration directory.
-
-  ![config file](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/29ff11d7-e121-45e0-a188-751d58bd0d1f)
+- Before running the FP, if we want to add any switches or change any values we should add these in `designs/picorv32a/sky130A_sky130_fd_sc_hd_config.tcl` as this is the pdk specific file that overrides the normal `config.tcl` and also the `floorplan.tcl` file.
 
 - Command:
   ```
