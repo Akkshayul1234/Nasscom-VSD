@@ -5,8 +5,8 @@
 <br>
 
 1. `cd` - To navigate between the directories
-2. `ls`, `ltr` - List directory contents, in long format sorted by modification time similar to 'll'
-3. `ls --help` - Display help information for the `ls` command
+2. `ls`, `ltr` - List directory contents, in long format sorted by modification time similar to `ll`
+3. `ls --help` - Displays the help information for the `ls` command
 4. For more commands refer [Basic Linux Cmds](https://www.geeksforgeeks.org/basic-linux-commands/)
 
 </details>
@@ -26,10 +26,11 @@ docker
 ```
 ![openlane startup](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/7145ed52-c1b8-46a8-9d5a-7731c14ff422)
 
-Import the nesscary package to run the flow by using the following command
+- Import the nesscary package to run the flow by using the following command
 ```
 package require openlane 0.9
 ```
+- For more on OpenLANE installation and flow - [efabless repo](https://github.com/efabless/openlane)
 
 ## Setting up OpenLANE Environment
 
@@ -51,13 +52,34 @@ prep -design picorv32a
 
 ![run folder contents](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/19f9c44b-dc6f-4b85-8d93-2a3e7d0eac7f)
 
-4. Starting the Synthesis Process
+## Synthesis 
+
+- Command:
 ```
  run_synthesis
 ```
 ![synthesis successfull](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/21f98b7d-71c0-4f5c-b7cb-ab091e6d7751)
 
 - After the Synthesis is Successfull the results are updated in the `reports/synthesis` folder.
+
+![flop ratio](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/3d48b9cf-9169-4c70-933a-68373ce215a3)
+
+- From this we can calculate the `Flop Ratio`- (No. of D-flipflops/ Total No of Cells)*100 = (1613/14876)*100 = 10.8 %
+
+## Floorplan (FP)
+
+- Before running the FP, we check the `config.tcl` file in the design directory `~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a` and compare the values `vmetal` and `hmetal` of this to the `floorplan.tcl` in the configuration directory.
+
+  ![config file](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/29ff11d7-e121-45e0-a188-751d58bd0d1f)
+
+- Command:
+  ```
+  run_floorplan
+  ```
+  ![floorplan successfull](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/6b135085-ff4d-470d-b4e7-261958afdc52)
+
+  
+
 
 
 
