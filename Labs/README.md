@@ -64,7 +64,11 @@ prep -design picorv32a
 
 ![flop ratio](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/3d48b9cf-9169-4c70-933a-68373ce215a3)
 
-- From this we can calculate the `Flop Ratio`- (No. of D-flipflops/ Total No of Cells)*100 = (1613/14876)*100 = 10.8 %
+- From this we can calculate the
+```math
+Flop\ Ratio = \frac{Number\ of\ D\ Flip\ Flops}{Total\ Number\ of\ Cells}  = \frac{1613}{14876} = 0.1084
+```
+- In terms of % = Flop Ratio * 100 = `10.84 %`
 
 ## Floorplan (FP)
 
@@ -75,6 +79,47 @@ prep -design picorv32a
   run_floorplan
   ```
   ![floorplan successfull](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/6b135085-ff4d-470d-b4e7-261958afdc52)
+
+  - After the floorplan is sucessfull we get these files in results directory.
+
+    ![floorplan results](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/1d5cca4b-65b4-490d-b8ff-9223a4999135)
+
+  - `picorv32a.floorplan.def.png`
+
+    ![picorv32a.floorplan.def.png](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/d9a7af80-457d-436e-ae6b-912e34b36082)
+
+  - inside the `.def` file, we have the info that can help us in measuring the size of the die
+
+    ![def file](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/680559bf-6378-4440-8428-ddcc87248af7)
+
+```math
+Given\ 1000\ Unit\ Distance = 1\ Micron
+```
+```math
+Die\ width = 660685 \ in \ unit \  distance
+```
+```math
+Die\ height = 671405 \ in \ unit \  distance
+```
+
+```math
+Die\ width = \frac{660685}{1000} = 660.685\ Microns
+```
+```math
+Die\ height = \frac{671405}{1000} = 671.405\ Microns
+```
+```math
+Area\ of\ die = 660.685 * 671.405 = 443587.212425\ Sq\ Microns
+```
+## MAGIC
+- Magic is a layout tool that helps us to view the chip layout of what we created in the floorplanning stage
+- Invoking the magic tool, requires the `lef` & `def` files along with the PDK's `.tech` file in order to map and view the floorplan in magic.
+  
+  ```
+  magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &
+  ```
+
+
 
   
 
