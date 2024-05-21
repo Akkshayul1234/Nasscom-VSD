@@ -127,6 +127,33 @@ Area\ of\ die = 660.685 * 671.405 = 443587.212425\ Sq\ Microns
 - Vertical cells at the bottom
   ![vertical cells](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/847c478a-9fa8-4c36-9475-dc868a57541a)
 
+## PLACEMENT
+
+- Command
+  ```
+  run_placement
+  ```
+  ![placement done](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/b97856de-efc1-47f1-98d8-6ba2f119167d)
+
+  ![slack](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/17fa2371-d8ee-47a7-b35a-ee2f92823a9f)
+
+  `picorv32a.placement.def.png`
+
+  ![picorv32a.placement.def.png](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/8b372a8f-5781-4742-aee4-841f743a6805)
+
+- If we look at the log file we see all the values of the Placement Analysis.
+  
+  ![placement analysis](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/fb00ac7a-b34d-4f70-a0b6-c4b1bb1741e8)
+
+- Magic View of Design
+
+  ![magic view](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/f9911fe7-7c25-46a4-8605-9e54eb73d5c6)
+
+- Zoomed view
+  
+  ![placement zoomed view](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/9fcde103-66cf-41a4-9d13-2a4ef0bd7a1d)
+
+
 
 
 
