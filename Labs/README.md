@@ -118,6 +118,17 @@ Area\ of\ die = 660.685 * 671.405 = 443587.212425\ Sq\ Microns
   ```
   magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &
   ```
+- Zoomed in view of the layout
+  ![zoomed in voew](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/a7b9c740-c8bd-40f8-a6e5-144376ba1aba)
+
+- To view any cell hover over the cell and click `s` and then type `what` on the `tkcon`
+  ![what on tkcon](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/370c3942-4704-48ce-b523-a9d3f6dc7cec)
+
+- Vertical cells at the bottom
+  ![vertical cells](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/847c478a-9fa8-4c36-9475-dc868a57541a)
+
+
+
 
 
 
