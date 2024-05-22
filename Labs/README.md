@@ -173,9 +173,11 @@ Area\ of\ die = 660.685 * 671.405 = 443587.212425\ Sq\ Microns
   ```
   ![cmos inverter](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/744da879-7cd0-4faa-a305-9d12fa8b2b0a)
 
-- You can see the various diffusion, metal lasyers, nmos and pmos in the design by hovering over them and pressing `s` to select and typing `what` in the `tkcon`
+- You can see the various diffusion, metal lasyers, nmos and pmos in the design by hovering over them and pressing `s` to select and typing `what` in the `tkcon` window.
 
   ![layers of the inverter](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/fc9eeaef-9f40-4864-86d6-24ce4545ba73)
+
+  ![nmos pmos](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/eb3bef97-5976-4cfa-9896-c8780d9c53e2)
 
 
 
