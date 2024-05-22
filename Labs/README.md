@@ -163,6 +163,20 @@ Area\ of\ die = 660.685 * 671.405 = 443587.212425\ Sq\ Microns
   ```
   ![repo clone](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/5d590ae3-9521-4f75-9e8a-e8bf66e26e92)
 
+- Copy the `Sky130A.tech` from `openlane_working_dir/pdks/sky130A/libs.tech/magic` to the `vsdstdcelldesign` folder.
+
+  ![vsdstdcell contents ](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/8c39c9b5-b0d6-4ba1-9485-f6ba41c5e6ce)
+  
+- Open the `CMOS inverter` and the `Sky130A`by using magic
+  ```
+   magic -T sky130A.tech sky130_inv.mag &
+  ```
+  ![cmos inverter](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/744da879-7cd0-4faa-a305-9d12fa8b2b0a)
+
+- You can see the various diffusion, metal lasyers, nmos and pmos in the design by hovering over them and pressing `s` to select and typing `what` in the `tkcon`
+
+  ![layers of the inverter](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/fc9eeaef-9f40-4864-86d6-24ce4545ba73)
+
 
 
 
