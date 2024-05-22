@@ -153,6 +153,17 @@ Area\ of\ die = 660.685 * 671.405 = 443587.212425\ Sq\ Microns
   
   ![placement zoomed view](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/9fcde103-66cf-41a4-9d13-2a4ef0bd7a1d)
 
+## LIBRARY CELL DESIGN USING MAGIC AND NGSPICE
+
+- We are going to see how to create the std cell layout and extract it using ngspice
+- The First step is to clone the [Github Repo](https://github.com/nickson-jose/vsdstdcelldesign) into our openlane directory
+  
+  ```
+  git clone https://github.com/nickson-jose/vsdstdcelldesign.git
+  ```
+  ![repo clone](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/5d590ae3-9521-4f75-9e8a-e8bf66e26e92)
+
+
 
 
 
