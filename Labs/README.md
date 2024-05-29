@@ -179,6 +179,70 @@ Area\ of\ die = 660.685 * 671.405 = 443587.212425\ Sq\ Microns
 
   ![nmos pmos](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/eb3bef97-5976-4cfa-9896-c8780d9c53e2)
 
+## EXTRACTING THE SPICE NETLIST
+- Below commands are used to extract the spice netlist, this done while `design` is open in `magic`.
+  ```
+  extract all
+  ext2spice cthresh 0 rthresh 0
+  ext2spice
+  ```
+![extarcting spice](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/a31b4321-25dd-4563-ae59-1c9c64bcff58)
+
+- In `vsdstdcelldesign` folder we will have the extracted spice netlist in a `.spice` file
+
+![spice netlist](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/85d04f5e-1b86-49dc-8b7f-3e0dbc075369)
+
+- In this we have to modify the following:
+   - include pshort nshort library files 
+   - define VDD and VSS sources
+   - create a pulse signal to create transient analysis
+
+![spice netlist edited](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/66d876f3-e2a9-4fed-bf25-0bf351bfc6f1)
+
+- To view the `Transient Analysis Graph` of the inverter we invoke the ngspice tool
+  ```
+  ngspice sky130_inv.spice
+  ```
+![ngspice tool](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/6563b26f-637f-4816-8543-fd64ee0453ed)
+
+- To plot the graph we use type `plot Y vs time a` in the `ngspice` terminal
+
+![graph](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/3f602fda-ef4e-43ea-8d28-e1150e1ce26f)
+
+![20% value](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/eb7fa6f5-a234-4baa-9cd3-5f5f14ed4516)
+
+![80% value](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/4a91fbc4-6aaa-4939-b73f-1bc0bedce07d)
+  
+**Rise Time**
+
+![rise time](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/21a9eafe-09c3-4174-b95d-926fe332bebe)
+- Rise time transition 20% to 80% - time value = (2.245-2.182)e-09 = 63ps
+  
+**Fall Time**
+
+![image](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/f2c1adc6-1efa-46a1-a5e3-edbe7239f800)
+- Fall time transition 80% to 20% - time value = (4.096-4.058)e-09 = 38ps
+
+**Cell Rise Delay**
+
+![cell rise delay](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/b2eaba33-71e2-4dbb-a428-7647f2f3c764)
+- Calculated at 50% of VDD (2.210-2.149)e-09 = 61ps
+
+**Cell Fall Delay**
+
+![cell fall delay](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/384ab243-4800-41ba-9e82-cd59466b949c)
+- Calculated at 50% of VDD (4.077-4.049)e-09 = 28ps
+
+
+  
+
+  
+
+ 
+
+
+  
+  
 
 
 
