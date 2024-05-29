@@ -233,6 +233,34 @@ Area\ of\ die = 660.685 * 671.405 = 443587.212425\ Sq\ Microns
 ![cell fall delay](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/384ab243-4800-41ba-9e82-cd59466b949c)
 - Calculated at 50% of VDD (4.077-4.049)e-09 = 28ps
 
+## Design Rules Checking (DRC) Intro
+
+- First download the drc test by using
+```
+wget http://opencircuitdesign.com/open_pdks/archive/drc_tests.tgz
+```
+![drc](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/1b1ef8c1-54d3-44a7-9518-1a6a04e86a29)
+
+- Then extract files and open the `magic tool` and load the design `met3.mag`
+
+![met3.mag](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/609a40a5-75bc-49d9-b1de-3c1a0575c870)
+
+- Fixing the poly error
+
+![poly](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/16fe10c4-d6fa-457a-b69c-5e743b094cb4)
+
+- Open the `gvim sky130A.tech` file and make the following changes here
+
+![poly](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/250a72b3-1825-43fa-ae31-e6a920d362e8)
+
+![poly](https://github.com/Akkshayul1234/Nasscom-VSD/assets/37902660/663d6a17-d2d4-4c19-a921-929872d57b94)
+
+
+
+
+
+
+
 
   
 
